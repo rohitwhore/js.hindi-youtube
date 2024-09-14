@@ -51,3 +51,33 @@ console.log("Hello world");
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+
+
+
+// ************************************************
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+
+// Understanding Stack
+let myName = "Rohit"
+let anotherName = myName
+anotherName = "Roy" // actual value of myName will not change
+
+console.log(myName); // Rohit
+console.log(anotherName); // Roy
+
+
+// Understanding Heap
+let userOne = {
+    mail: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.mail = "user2@google.com" // user1 ka v change hoga
+
+console.log(userOne.mail); // user2@google.com
+console.log(userTwo.mail); // user2@google.com
+
