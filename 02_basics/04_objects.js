@@ -54,3 +54,30 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "Rohit"
+}
+
+const {courseInstructor} = course // another way to access objects
+console.log(courseInstructor);
+// we can also de-structure object means change the name and access like
+const{courseInstructor: instructor} = course
+console.log(instructor)
+
+// JSON
+
+// {
+//     "name": "Rohit",
+//     "course": "Btech",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
