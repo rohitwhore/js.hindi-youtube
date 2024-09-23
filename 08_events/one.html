@@ -30,11 +30,28 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+    document.getElementById('images').addEventListener("click",function(e){
+        console.log("clicked inside the ul");
+    },false) 
+
     document.getElementById('owl').addEventListener("click",function(e){
-        console.log(e);
+        console.log("clicked owl");
+        e.stopPropagation()
     },false) // in default also false is there
+
+    document.getElementById('google').addEventListener("click",function(e){
+        e.preventDefault();
+        e.stopPropagation()
+    },false)
     
-    
+    document.querySelector('#images').addEventListener("click",function(e){
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+        //removeIt.parentNode.removeChild(removeIt)
+    },false)
 
 </script>
 </html>
